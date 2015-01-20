@@ -6,13 +6,16 @@
 //  Copyright (c) 2015 Comercomp. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "Home.h"
 
-@interface ViewController ()
+int counter=0;
+
+
+@interface Home ()
 
 @end
 
-@implementation ViewController
+@implementation Home
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,4 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+- (IBAction)BtnPushClick:(id)sender {
+    counter++;
+    self.LblScore.text = [NSString stringWithFormat:@"%d", counter];
+}
 @end
