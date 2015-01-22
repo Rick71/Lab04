@@ -7,6 +7,8 @@
 //
 
 #import "Scores.h"
+#import "GlobalVars.h"
+
 
 @interface Scores ()
 
@@ -17,6 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSDate *hoy = [[NSDate alloc] init];
+    
+    NSDateFormatter *dateFormat  =[[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"cccc, MMMM dd, YYYY, \n hh:mm aa"];
+     NSString *prettyVersion = [dateFormat stringFromDate:hoy];
+    
+    self.lblResultado.text = [NSString stringWithFormat:@"%d", counter];
+    self.lblTimestamp.text = prettyVersion;
+    
 }
 
 - (void)didReceiveMemoryWarning {

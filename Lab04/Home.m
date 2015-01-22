@@ -7,8 +7,8 @@
 //
 
 #import "Home.h"
+#import "GlobalVars.h"
 
-int counter;
 NSTimer *myTimer;
 
 
