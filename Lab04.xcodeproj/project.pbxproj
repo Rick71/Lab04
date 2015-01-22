@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D48C2851A70AE870092985D /* Scores.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48C2841A70AE870092985D /* Scores.m */; };
 		1DDDB5AF1A6DF090001DAF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDB5AE1A6DF090001DAF33 /* main.m */; };
 		1DDDB5B21A6DF090001DAF33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDB5B11A6DF090001DAF33 /* AppDelegate.m */; };
 		1DDDB5B51A6DF090001DAF33 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDB5B41A6DF090001DAF33 /* Home.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D48C2831A70AE870092985D /* Scores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scores.h; sourceTree = "<group>"; };
+		1D48C2841A70AE870092985D /* Scores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scores.m; sourceTree = "<group>"; };
 		1DDDB5A91A6DF090001DAF33 /* Lab04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDDB5AD1A6DF090001DAF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DDDB5AE1A6DF090001DAF33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				1DDDB5B11A6DF090001DAF33 /* AppDelegate.m */,
 				1DDDB5B31A6DF090001DAF33 /* Home.h */,
 				1DDDB5B41A6DF090001DAF33 /* Home.m */,
+				1D48C2831A70AE870092985D /* Scores.h */,
+				1D48C2841A70AE870092985D /* Scores.m */,
 				1DDDB5B61A6DF090001DAF33 /* Main.storyboard */,
 				1DDDB5B91A6DF090001DAF33 /* Images.xcassets */,
 				1DDDB5BB1A6DF090001DAF33 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				1DDDB5B51A6DF090001DAF33 /* Home.m in Sources */,
 				1DDDB5B21A6DF090001DAF33 /* AppDelegate.m in Sources */,
+				1D48C2851A70AE870092985D /* Scores.m in Sources */,
 				1DDDB5AF1A6DF090001DAF33 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +418,7 @@
 				1DDDB5CE1A6DF090001DAF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DDDB5CF1A6DF090001DAF33 /* Build configuration list for PBXNativeTarget "Lab04Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				1DDDB5D11A6DF090001DAF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
