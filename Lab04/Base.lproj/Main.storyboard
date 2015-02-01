@@ -16,18 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eL0-Bp-rXM" userLabel="BtnPush">
-                                <rect key="frame" x="68" y="468" width="185" height="42"/>
-                                <color key="backgroundColor" red="0.0" green="0.70401278409090917" blue="0.0040275267104930221" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Click">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="BtnPushClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eb6-YB-Hpx"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxs-Zq-Phv">
                                 <rect key="frame" x="95" y="39" width="150" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,13 +28,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eL0-Bp-rXM" userLabel="BtnPush">
+                                <rect key="frame" x="68" y="471" width="185" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.70401278409090917" blue="0.0040275267104930221" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Click">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnPushClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eb6-YB-Hpx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18037193378035438" green="0.5" blue="0.16821781099587724" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="LblScore" destination="vfb-gT-mg7" id="63U-Eb-ueH"/>
-                        <segue destination="lqu-if-TXJ" kind="custom" identifier="GoToScore" id="9jf-Cg-Ug6"/>
+                        <segue destination="lqu-if-TXJ" kind="show" identifier="GoToScore" id="9jf-Cg-Ug6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -95,18 +95,54 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="43" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-1u-qfo">
+                                <rect key="frame" x="23" y="214" width="275" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Score_Cell" rowHeight="43" id="CZ2-g4-Unx" customClass="Score_Cell">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CZ2-g4-Unx" id="Hlb-5a-K9q">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-9Y-K5I">
+                                                    <rect key="frame" x="19" y="10" width="119" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhC-5G-vwc">
+                                                    <rect key="frame" x="146" y="10" width="121" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LblFecha" destination="EhC-5G-vwc" id="YZM-6h-w5S"/>
+                                            <outlet property="LblScore" destination="dpD-9Y-K5I" id="RME-Ff-ICQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lqu-if-TXJ" id="zu9-60-mPe"/>
+                                    <outlet property="delegate" destination="lqu-if-TXJ" id="tRJ-b4-Z3L"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.1791739038365448" green="0.59142203282828287" blue="0.23588839294048697" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="TableView" destination="rbx-1u-qfo" id="KRG-jc-3zm"/>
                         <outlet property="lblResultado" destination="mAx-Le-YjM" id="w5b-qZ-Nxh"/>
                         <outlet property="lblTimestamp" destination="zTY-A8-Xl7" id="Ipr-ic-Oh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0e-O0-z7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="315"/>
+            <point key="canvasLocation" x="673" y="308"/>
         </scene>
     </scenes>
 </document>

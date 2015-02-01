@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D079A041A7AC71000E5F068 /* Score Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D079A031A7AC71000E5F068 /* Score Cell.m */; };
+		1D282F3E1A7DD2C3000537BC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D282F3D1A7DD2C3000537BC /* libsqlite3.dylib */; };
+		1D282F441A7DD541000537BC /* DBScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D282F431A7DD541000537BC /* DBScore.m */; };
 		1D48C2851A70AE870092985D /* Scores.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48C2841A70AE870092985D /* Scores.m */; };
 		1D48C2881A70BAF00092985D /* GlobalVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48C2871A70BAF00092985D /* GlobalVars.m */; };
 		1DDDB5AF1A6DF090001DAF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDB5AE1A6DF090001DAF33 /* main.m */; };
@@ -29,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D079A021A7AC71000E5F068 /* Score Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Score Cell.h"; sourceTree = "<group>"; };
+		1D079A031A7AC71000E5F068 /* Score Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Score Cell.m"; sourceTree = "<group>"; };
+		1D282F3D1A7DD2C3000537BC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1D282F421A7DD541000537BC /* DBScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBScore.h; sourceTree = "<group>"; };
+		1D282F431A7DD541000537BC /* DBScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBScore.m; sourceTree = "<group>"; };
 		1D48C2831A70AE870092985D /* Scores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scores.h; sourceTree = "<group>"; };
 		1D48C2841A70AE870092985D /* Scores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scores.m; sourceTree = "<group>"; };
 		1D48C2861A70BAF00092985D /* GlobalVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVars.h; sourceTree = "<group>"; };
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D282F3E1A7DD2C3000537BC /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +75,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D079A011A7AC68000E5F068 /* Customized */ = {
+			isa = PBXGroup;
+			children = (
+				1D079A021A7AC71000E5F068 /* Score Cell.h */,
+				1D079A031A7AC71000E5F068 /* Score Cell.m */,
+			);
+			name = Customized;
+			sourceTree = "<group>";
+		};
 		1DDDB5A01A6DF090001DAF33 = {
 			isa = PBXGroup;
 			children = (
+				1D282F3D1A7DD2C3000537BC /* libsqlite3.dylib */,
+				1D079A011A7AC68000E5F068 /* Customized */,
 				1DDDB5AB1A6DF090001DAF33 /* Lab04 */,
 				1DDDB5C51A6DF090001DAF33 /* Lab04Tests */,
 				1DDDB5AA1A6DF090001DAF33 /* Products */,
@@ -99,6 +119,8 @@
 				1DDDB5B91A6DF090001DAF33 /* Images.xcassets */,
 				1DDDB5BB1A6DF090001DAF33 /* LaunchScreen.xib */,
 				1DDDB5AC1A6DF090001DAF33 /* Supporting Files */,
+				1D282F421A7DD541000537BC /* DBScore.h */,
+				1D282F431A7DD541000537BC /* DBScore.m */,
 			);
 			path = Lab04;
 			sourceTree = "<group>";
@@ -230,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D48C2881A70BAF00092985D /* GlobalVars.m in Sources */,
+				1D079A041A7AC71000E5F068 /* Score Cell.m in Sources */,
 				1DDDB5B51A6DF090001DAF33 /* Home.m in Sources */,
 				1DDDB5B21A6DF090001DAF33 /* AppDelegate.m in Sources */,
+				1D282F441A7DD541000537BC /* DBScore.m in Sources */,
 				1D48C2851A70AE870092985D /* Scores.m in Sources */,
 				1DDDB5AF1A6DF090001DAF33 /* main.m in Sources */,
 			);

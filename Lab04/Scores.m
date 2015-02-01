@@ -8,6 +8,11 @@
 
 #import "Scores.h"
 #import "GlobalVars.h"
+#import "Score Cell.h"
+
+NSMutableArray *ScoreArray;
+NSMutableArray *Fechaarray;
+
 
 
 @interface Scores ()
@@ -45,5 +50,59 @@
     // Pass the selected object to the new view controller.
 }
 */
+/**********************************************************************************************
+ Table Functions
+ **********************************************************************************************/
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+//-------------------------------------------------------------------------------
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return ScoreArray.count;
+}
+//-------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 64;
+}
+//-------------------------------------------------------------------------------
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Score_cell");
+    static NSString *CellIdentifier = @"Score_Cell";
+    
+    Score_Cell *cell = (Score_Cell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[Score_Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.LblScore.text       = ScoreArray[indexPath.row];
+    cell.LblFecha.text       = Fechaarray[indexPath.row];
+    
+    return cell;
+}
 
+/*/-------------------------------------------------------------------------------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.lblSelectedName.text = maNames[indexPath.row];
+    NSString *strTemp;
+    
+    strTemp = [self.lblSelectedName.text stringByAppendingString: @" fué seleccionado"];
+    
+    if (indexPath.row == 2)
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
+                                           message:strTemp
+                                          delegate:self
+                                 cancelButtonTitle:@"Cancelar"
+                                 otherButtonTitles:@"Guardar", @"Publicar", nil];
+        [alert show];
+    }
+}
+
+*/
 @end

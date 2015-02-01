@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Scores : UIViewController
+@interface Scores : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *lblResultado;
 @property (strong, nonatomic) IBOutlet UILabel *lblTimestamp;
+
+@property (strong, nonatomic) IBOutlet UITableView *TableView;
 
 @end
