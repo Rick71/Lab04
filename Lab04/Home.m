@@ -10,6 +10,7 @@
 #import "GlobalVars.h"
 
 NSTimer *myTimer;
+int contador = 0;
 
 
 @interface Home ()
@@ -19,12 +20,24 @@ NSTimer *myTimer;
 @implementation Home
 
 - (void)viewDidLoad {
+    contador = 0;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     counter = 0;
     
-    myTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(goToScores) userInfo:nil repeats:NO];
+    myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tiempo) userInfo:nil repeats:YES];
+}
+
+-(void)tiempo{
+    int segundos = 10-contador;
+    self.lblTiempo.text = [NSString stringWithFormat:@"%d", segundos];
+    contador++;
+    if(segundos == 0){
+        [myTimer invalidate];
+        myTimer = nil;
+        [self goToScores];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,9 +46,21 @@ NSTimer *myTimer;
 }
 
 -(void)goToScores{
-
+    BOOL success = NO;
+    NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+    [DateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    
+    success = [[DBScore getSharedInstance]saveData:
+               [NSString stringWithFormat:@"%i",counter]
+                                              detail:[DateFormatter stringFromDate:[NSDate date]]];
+    
     [self performSegueWithIdentifier:@"GoToScore" sender:self];
+    
 }
+
+
+
+
 
 
 
@@ -43,4 +68,6 @@ NSTimer *myTimer;
     counter++;
     self.LblScore.text = [NSString stringWithFormat:@"%d", counter];
 }
+
+
 @end

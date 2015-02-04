@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface Score_Cell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *LblScore;
-@property (strong, nonatomic) IBOutlet UILabel *LblFecha;
+@property (strong, nonatomic) IBOutlet UILabel *lblClick;
+@property (strong, nonatomic) IBOutlet UILabel *lblFecha;
 
 @end

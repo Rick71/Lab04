@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBScore.h"
 
 @interface Home : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *LblScore;
+@property (strong, nonatomic) IBOutlet UILabel *lblTiempo;
 
 - (IBAction)BtnPushClick:(id)sender;
 

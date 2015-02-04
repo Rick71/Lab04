@@ -113,14 +113,14 @@
 				1DDDB5B41A6DF090001DAF33 /* Home.m */,
 				1D48C2831A70AE870092985D /* Scores.h */,
 				1D48C2841A70AE870092985D /* Scores.m */,
+				1D282F421A7DD541000537BC /* DBScore.h */,
+				1D282F431A7DD541000537BC /* DBScore.m */,
 				1D48C2861A70BAF00092985D /* GlobalVars.h */,
 				1D48C2871A70BAF00092985D /* GlobalVars.m */,
 				1DDDB5B61A6DF090001DAF33 /* Main.storyboard */,
 				1DDDB5B91A6DF090001DAF33 /* Images.xcassets */,
 				1DDDB5BB1A6DF090001DAF33 /* LaunchScreen.xib */,
 				1DDDB5AC1A6DF090001DAF33 /* Supporting Files */,
-				1D282F421A7DD541000537BC /* DBScore.h */,
-				1D282F431A7DD541000537BC /* DBScore.m */,
 			);
 			path = Lab04;
 			sourceTree = "<group>";

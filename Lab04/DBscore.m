@@ -16,9 +16,11 @@ static sqlite3         *database = nil;
 static sqlite3_stmt   *statement = nil;
 
 @implementation DBScore
+
+
 +(DBScore*)getSharedInstance{
     if (!sharedInstance) {
-        sharedInstance = [[super allocWithZone:NULL]init];
+        sharedInstance = [[DBScore alloc]init];
         [sharedInstance createDB];
     }
     return sharedInstance;
@@ -74,6 +76,7 @@ static sqlite3_stmt   *statement = nil;
         {
             sqlite3_reset(statement);
             lastScore = [registerNumber intValue];
+            NSLog(@"Guardado");
             return YES;
         } else {
             NSLog(@"Statement FAILED (%s)", sqlite3_errmsg(database));
