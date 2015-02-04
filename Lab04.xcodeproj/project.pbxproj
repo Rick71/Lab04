@@ -84,9 +84,17 @@
 			name = Customized;
 			sourceTree = "<group>";
 		};
+		1D40B53D1A81DFD000357552 /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Imagenes;
+			sourceTree = "<group>";
+		};
 		1DDDB5A01A6DF090001DAF33 = {
 			isa = PBXGroup;
 			children = (
+				1D40B53D1A81DFD000357552 /* Imagenes */,
 				1D282F3D1A7DD2C3000537BC /* libsqlite3.dylib */,
 				1D079A011A7AC68000E5F068 /* Customized */,
 				1DDDB5AB1A6DF090001DAF33 /* Lab04 */,
