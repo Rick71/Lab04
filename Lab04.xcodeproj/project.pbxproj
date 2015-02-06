@@ -10,6 +10,7 @@
 		1D079A041A7AC71000E5F068 /* Score Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D079A031A7AC71000E5F068 /* Score Cell.m */; };
 		1D282F3E1A7DD2C3000537BC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D282F3D1A7DD2C3000537BC /* libsqlite3.dylib */; };
 		1D282F441A7DD541000537BC /* DBScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D282F431A7DD541000537BC /* DBScore.m */; };
+		1D3E6E2E1A8299BA00B2C6DF /* Push.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E6E2D1A8299BA00B2C6DF /* Push.png */; };
 		1D48C2851A70AE870092985D /* Scores.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48C2841A70AE870092985D /* Scores.m */; };
 		1D48C2881A70BAF00092985D /* GlobalVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48C2871A70BAF00092985D /* GlobalVars.m */; };
 		1DDDB5AF1A6DF090001DAF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDB5AE1A6DF090001DAF33 /* main.m */; };
@@ -37,6 +38,7 @@
 		1D282F3D1A7DD2C3000537BC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1D282F421A7DD541000537BC /* DBScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBScore.h; sourceTree = "<group>"; };
 		1D282F431A7DD541000537BC /* DBScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBScore.m; sourceTree = "<group>"; };
+		1D3E6E2D1A8299BA00B2C6DF /* Push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Push.png; path = ../../../Push.png; sourceTree = "<group>"; };
 		1D48C2831A70AE870092985D /* Scores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scores.h; sourceTree = "<group>"; };
 		1D48C2841A70AE870092985D /* Scores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scores.m; sourceTree = "<group>"; };
 		1D48C2861A70BAF00092985D /* GlobalVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVars.h; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		1D40B53D1A81DFD000357552 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				1D3E6E2D1A8299BA00B2C6DF /* Push.png */,
 			);
 			name = Imagenes;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				1DDDB5B81A6DF090001DAF33 /* Main.storyboard in Resources */,
 				1DDDB5BD1A6DF090001DAF33 /* LaunchScreen.xib in Resources */,
 				1DDDB5BA1A6DF090001DAF33 /* Images.xcassets in Resources */,
+				1D3E6E2E1A8299BA00B2C6DF /* Push.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
