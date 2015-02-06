@@ -7,7 +7,7 @@
 //
 
 #import "GlobalVars.h"
-
+// declara variables en .h
 @implementation GlobalVars
 
 @end
